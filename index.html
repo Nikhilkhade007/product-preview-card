@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Product preview card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family: "Montserrat", sans-serif;
+        background-color: #ffebeb;
+        box-sizing: border-box;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+
+        align-items: center;
+      }
+      .main {
+        width: 700px;
+        height: 500px;
+        display: flex;
+        border-radius: 12px;
+        background-color: #fff;
+      }
+      .left-conatiner {
+        -webkit-border-radius: 12px 0 0 12px;
+        background-image: url("images/image-product-desktop.jpg");
+        background-size: cover;
+        width: 50%;
+      }
+      .right-conatiner {
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+      }
+
+      .add-image {
+        height: 20px;
+        width: 20px;
+        margin-right: 8px;
+      }
+      .title {
+        margin: 0 30px 30px 30px;
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        font-size: 2.4rem;
+        line-height: 1;
+      }
+      .description {
+        color: hsl(228, 12%, 48%);
+        margin: 0 30px 30px 30px;
+        line-height: 1.6;
+        padding-right: 10px;
+      }
+      .price {
+        display: flex;
+        margin: 0 30px 30px 30px;
+        align-items: center;
+        gap: 20px;
+      }
+      .discount {
+        color: hsl(158, 36%, 37%);
+        font-family: "Fraunces", serif;
+        font-weight: 700;
+        font-size: 2.5rem;
+      }
+      .actual {
+        color: hsl(228, 12%, 48%);
+        text-decoration: line-through;
+      }
+      .btn {
+        width: 80%;
+        background-color: hsl(158, 36%, 37%);
+        color: #fff;
+        border: none;
+        padding: 15px;
+        align-self: center;
+        font-size: 16px;
+        border-radius: 8px;
+        font-weight: 700;
+        cursor: pointer;
+      }
+      .btn:hover {
+        background-color: hsl(158, 67%, 18%);
+      }
+      h1 {
+        letter-spacing: 5px;
+        font-weight: 500;
+        color: hsl(228, 12%, 48%);
+        font-size: 1rem;
+        text-transform: uppercase;
+        margin: 30px;
+      }
+      @media (max-width: 740px) {
+        .main {
+          flex-direction: column;
+          width: 420px;
+          height: 750px;
+        }
+        .left-conatiner {
+          background-image: url("images/image-product-mobile.jpg");
+          -webkit-border-radius: 12px 12px 0 0;
+          width: 100%;
+          height: 300px;
+        }
+        .right-conatiner {
+          width: 100%;
+        }
+        h1 {
+          margin-bottom: 20px;
+        }
+        .title {
+          margin-bottom: 20px;
+        }
+        .description {
+          margin-bottom: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="main">
+        <div class="left-conatiner"></div>
+        <div class="right-conatiner">
+          <h1>Preview</h1>
+
+          <div class="title">Gabrielle Essence Eau De Parfum</div>
+          <div class="description">
+            A floral, solar and voluptuous interpretation composed by Olivier
+            Polge, Perfumer-Creator for the House of CHANEL.
+          </div>
+          <div class="price">
+            <div class="discount">$149.99</div>
+            <div class="actual">$169.99</div>
+          </div>
+          <button class="btn">
+            <img
+              class="add-image"
+              src="./images/icon-cart.svg"
+              alt="cart image"
+            />
+
+            Add to Cart
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
